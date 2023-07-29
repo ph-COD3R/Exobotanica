@@ -4,15 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Importe o React e o ReactDOM -->
+  <script src="https://cdn.jsdelivr.net/npm/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@17.0.2/umd/react-dom.development.js"></script>
+
   <title>Exobotanica - produtos</title>
-  
 </head>
 <body>
+  <!-- Container para renderizar o componente React "ProdutosList" -->
+  <div id="produtos-list-container"></div>
+
+   <!-- Container para renderizar o componente React "Carrinho" -->
+   <div id="carrinho-container"></div>
 
   <!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Importe o arquivo "ProdutosList.js" que criamos anteriormente -->
+  <script src="ProdutosList.js"></script>
+
+  <script src="Carrinho.js"></script>
+
+  <!-- Script para renderizar o componente React "ProdutosList" no elemento "produtos-list-container" -->
+  <script>
+    const container = document.getElementById('produtos-list-container');
+    ReactDOM.render(React.createElement(ProdutosList), container);
+  </script>
+
+   <!-- Script para renderizar o componente React "Carrinho" no elemento "carrinho-container" -->
+   <script>
+    const carrinhoContainer = document.getElementById('carrinho-container');
+    ReactDOM.render(React.createElement(Carrinho), carrinhoContainer);
+  </script>
 
 
 <!-- Navbar -->
