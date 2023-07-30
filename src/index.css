@@ -1,0 +1,27 @@
+/* Add CSS styles to make the navbar stay at the top and occupy 100% width */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  nav.navbar {
+    width: 100%;
+  }
+  
+  /* Add some padding to the top of the content to avoid overlapping with the fixed navbar */
+  .container {
+    padding-top: 5px;
+  }
+  
+  .nav-link {
+    cursor: pointer;
+
+  }
